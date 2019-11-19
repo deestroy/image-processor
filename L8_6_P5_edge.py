@@ -31,6 +31,7 @@ def detect_edges(image: Image,threshold: int) -> Image:
     show(image)
     return image
 
+
 def detect_edges_better(image: Image,threshold: int) -> Image:
     """
     Author: Dhriti Aravind
@@ -106,6 +107,21 @@ def flip_horizontal(image: Image) -> Image:
             
     show(image)
     return image
-copy = flip_horizontal(image)
+
+
+def flip_vertical_test(vertical_image: Image, image: Image):
+    for x in range(0, get_width(image)):
+        for y in range(0, get_height(image)):
+            r, g, b = get_color(image,x,y)
+            r2, g2, b2 = get_color(vertical_image, x, y)
+            if r == r2 and g == g2 and b == b2:
+                print("TEST PASS at: "+ str(x) +" ," +str(y))
+            else:
+                print("TEST FAIL at: " +str(x) +" ," +str(y))
+                
+            
+            
+copy = flip_vertical(image)
+flip_vertical_test(copy,image)
             
             
