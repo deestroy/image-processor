@@ -110,6 +110,14 @@ def flip_horizontal(image: Image) -> Image:
 
 
 def flip_vertical_test(vertical_image: Image, image: Image):
+    """
+    Author: Dhriti Aravind
+    Check if the image outputted by the vertical flipper contains the
+    pixel values for the original image but in "reversed" order
+    
+    >>> image = load_image(choose_file())
+    >>> flip_vertical_test(image) 
+    """
     for x in range(0, get_width(image)):
         for y in range(0, get_height(image)):
             r, g, b = get_color(image,x,y)
