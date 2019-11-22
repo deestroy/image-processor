@@ -1,26 +1,24 @@
+"""
+ECOR 1051 Fall 2019
+Group Number: L8-6
+Milestone 2
+
+Test function for the flip_vertical using the the simple filters
+Last edited: Nov. 22, 2019 (flip_vertical_test algorithms was modified)
+"""
+
+""" This file uses unit testing to test the image-processing filter 
+flip_vertical. The 'original' image is a series of pixels combined into an image
+that is passed into the flip_vertical filter found in L8_6_P5_vertical.py. The 
+output of the filter is compared to the expected values (calculated 'by hand')
+for each pixel in the image. If the r,g,b values of each pixel does not 
+correspond to the expected values for the filter, the shell will display 
+'FAILED' along with the expected and resulting value.
+"""
+
+
 from Cimpl import *
 from L8_6_P5_vertical import *
-
-
-#def flip_vertical_test(vertical_image: Image, image: Image) -> None:
-    #"""
-    #Author: Dhriti Aravind
-    #Check if the image outputted by the vertical flipper contains the
-    #pixel values for the original image but in "reversed" order
-    
-    #>>> image = load_image(choose_file())
-    #>>> flip_vertical_test(image) 
-    #"""
-    #for x in range(0, get_width(image)):
-        #for y in range(0, get_height(image)):
-            #r, g, b = get_color(image,x,y)
-            #r2, g2, b2 = get_color(vertical_image, x, y)
-            #if r == r2 and g == g2 and b == b2:
-                #print("TEST PASS at: "+ str(x) +" ," +str(y))
-            #else:
-                #print("TEST FAIL at: " +str(x) +" ," +str(y))
-                
-#flip_vertical_test(copy,image)
 
 def check_equal(description: str, outcome, expected) -> None:
     """
@@ -60,8 +58,10 @@ def check_equal(description: str, outcome, expected) -> None:
     
 def flip_vertical_test() -> None:
     """
-    Print "PASSED" message in the shell if the outcome is the same as expected,
-    otherwise, print "FAILED" along with the associated coordinates.
+    Author: Dhriti Aravind
+    A test for the function flip_vertical.
+    
+    >>> flip_vertical_test()
     """
     
     #Create an image with 15 pixels

@@ -1,3 +1,11 @@
+"""
+ECOR 1051 Fall 2019
+Group Number: L8-6
+Milestone 2
+
+Last edited: Nov. 18, 2019
+"""
+
 from Cimpl import *
 
 file = choose_file()
@@ -5,6 +13,7 @@ image = load_image(file)
 
 def flip_horizontal(image: Image) -> Image:
     """
+    Author: Dhriti Aravind
     Return the image flipped vertically
     
     >>> image = load_image(choose_file())
