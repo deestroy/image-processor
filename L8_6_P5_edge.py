@@ -63,7 +63,7 @@ def detect_edges_better(image: Image,threshold: int) -> Image:
     show(image)
     return image
 
-#copy_image = detect_edges(image, 3)
+copy_image = detect_edges(image, 40)
 
 #copy_image = detect_edges_better(image, 14)
 
@@ -78,7 +78,7 @@ def flip_vertical(image: Image) -> Image:
     centre_w = get_width(image)//2
     w = get_width(image)
     h = get_height(image)
-    for x in range(centre_w -1):
+    for x in range(centre_w):
         for y in range(h):
             r, g, b = get_color(image,x,y)
             r2, g2, b2 = get_color(image,abs(w-x)-1, y)
@@ -109,27 +109,27 @@ def flip_horizontal(image: Image) -> Image:
     return image
 
 
-def flip_vertical_test(vertical_image: Image, image: Image):
-    """
-    Author: Dhriti Aravind
-    Check if the image outputted by the vertical flipper contains the
-    pixel values for the original image but in "reversed" order
+#def flip_vertical_test(vertical_image: Image, image: Image):
+    #"""
+    #Author: Dhriti Aravind
+    #Check if the image outputted by the vertical flipper contains the
+    #pixel values for the original image but in "reversed" order
     
-    >>> image = load_image(choose_file())
-    >>> flip_vertical_test(image) 
-    """
-    for x in range(0, get_width(image)):
-        for y in range(0, get_height(image)):
-            r, g, b = get_color(image,x,y)
-            r2, g2, b2 = get_color(vertical_image, x, y)
-            if r == r2 and g == g2 and b == b2:
-                print("TEST PASS at: "+ str(x) +" ," +str(y))
-            else:
-                print("TEST FAIL at: " +str(x) +" ," +str(y))
+    #>>> image = load_image(choose_file())
+    #>>> flip_vertical_test(image) 
+    #"""
+    #for x in range(0, get_width(image)):
+        #for y in range(0, get_height(image)):
+            #r, g, b = get_color(image,x,y)
+            #r2, g2, b2 = get_color(vertical_image, x, y)
+            #if r == r2 and g == g2 and b == b2:
+                #print("TEST PASS at: "+ str(x) +" ," +str(y))
+            #else:
+                #print("TEST FAIL at: " +str(x) +" ," +str(y))
                 
             
             
-copy = flip_vertical(image)
-flip_vertical_test(copy,image)
+#copy = flip_vertical(image)
+#flip_vertical_test(copy,image)
             
             

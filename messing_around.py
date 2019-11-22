@@ -33,7 +33,7 @@ for pixel in image:
     #else: new_colour = create_color(r,g,b) 
     #set_color(image,x,y,new_colour)
     
-   
+    """EXAMPLE OF BAD CODE"""
     avg = (r+g+b)//3
     r = 255- r
     b = 255- b
@@ -90,6 +90,29 @@ for pixel in image:
     else:
         new_colour = create_color(255-r, 255-g, 255-b)
     set_color(image,x,y,new_colour)
+    
+    """Red"""
+    #new_colour = create_color(r,0,0)
+    #x = (r,0,0)
+    #set_color(image,x,y,new_colour)
+    
+    """Green"""
+    #new_colour = create_color(0,g,0)
+    #y =(0,g,0)
+    #set_color(image,x,y,new_colour) 
+    
+    """Blue"""
+    #new_colour = create_color(0,0,b)
+    #z = (0,0,b)
+    #set_color(image,x,y,new_colour) 
+    
+    #c = x + y + z
+    #a,d,c = c
+    #new_colour = create_color(a,d,c)
+    #et_color(image,x,y,new_colour) 
+    
+    
+    
 
 show(image)
 

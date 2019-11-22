@@ -1,5 +1,5 @@
 from Cimpl import *
-from L8_6_P5_edge import *
+from L8_6_P5_vertical import *
 
 
 #def flip_vertical_test(vertical_image: Image, image: Image) -> None:
@@ -66,41 +66,45 @@ def flip_vertical_test() -> None:
     
     #Create an image with 15 pixels
     original = create_image(5, 3)
-    set_color(original, 0, 0,  create_color(150, 140, 0))
-    set_color(original, 1, 0,  create_color(160, 130, 1))
-    set_color(original, 2, 0,  create_color(170, 120, 2))
-    set_color(original, 3, 0,  create_color(180, 110, 3))
-    set_color(original, 4, 0,  create_color(190, 100, 4))
-    set_color(original, 0, 1,  create_color(200, 90, 5))
-    set_color(original, 1, 1,  create_color(210, 80, 6))
-    set_color(original, 2, 1,  create_color(220, 70, 7))
-    set_color(original, 3, 1,  create_color(230, 60, 8))
-    set_color(original, 4, 1,  create_color(240, 50, 9))
-    set_color(original, 0, 1,  create_color(244, 45, 5))
-    set_color(original, 1, 2,  create_color(250, 40, 0))
-    set_color(original, 2, 2,  create_color(10, 30, 1))
-    set_color(original, 3, 2,  create_color(20, 20, 2))
-    set_color(original, 4, 2,  create_color(30, 10, 3))
+    set_color(original, 0, 0,  create_color(1, 1, 15))
+    set_color(original, 1, 0,  create_color(1, 2, 14))
+    set_color(original, 2, 0,  create_color(1, 3, 13))
+    set_color(original, 3, 0,  create_color(1, 4, 12))
+    set_color(original, 4, 0,  create_color(1, 5, 11))
+    
+    set_color(original, 0, 1,  create_color(1, 6, 10))
+    set_color(original, 1, 1,  create_color(1, 7, 9))
+    set_color(original, 2, 1,  create_color(1, 8, 8))
+    set_color(original, 3, 1,  create_color(1, 9, 7))
+    set_color(original, 4, 1,  create_color(1, 10, 6))
+    set_color(original, 0, 2,  create_color(1, 11, 5))
+    set_color(original, 1, 2,  create_color(1, 12, 4))
+    set_color(original, 2, 2,  create_color(1, 13, 3))
+    set_color(original, 3, 2,  create_color(1, 14, 2))
+    set_color(original, 4, 2,  create_color(1, 15, 1))
     
     #Create the expected outcome for the original image
     #Should provide the outcome after the original is passed in.
-    expected = create_image(5 ,3)
-    set_color(expected, 4, 0,  create_color(190, 100, 4))
-    set_color(expected, 3, 0,  create_color(180, 110, 3))
-    set_color(expected, 2, 0,  create_color(170, 120, 2))
-    set_color(expected, 1, 0,  create_color(160, 130, 1))
-    set_color(expected, 0, 0,  create_color(150, 140, 0))
-    set_color(expected, 4, 1,  create_color(240, 50, 9))
-    set_color(expected, 3, 1,  create_color(230, 60, 8))
-    set_color(expected, 2, 1,  create_color(220, 70, 7))
-    set_color(expected, 1, 1,  create_color(210, 80, 6))
-    set_color(expected, 0, 1,  create_color(200, 90, 5))
-    set_color(expected, 4, 2,  create_color(30, 10, 3))
-    set_color(expected, 3, 2,  create_color(20, 20, 2))
-    set_color(expected, 2, 2,  create_color(10, 30, 1))
-    set_color(expected, 1, 2,  create_color(250, 40, 0))
-    set_color(expected, 0, 1,  create_color(244, 45, 5))
     
+    expected = create_image(5, 3)
+    set_color(expected, 0, 0,  create_color(1, 5, 11))
+    set_color(expected, 1, 0,  create_color(1, 4, 12))
+    set_color(expected, 2, 0,  create_color(1, 3, 13))
+    set_color(expected, 3, 0,  create_color(1, 2, 14))
+    set_color(expected, 4, 0,  create_color(1, 1, 15))
+    
+    set_color(expected, 4, 1,  create_color(1, 6, 10))
+    set_color(expected, 3, 1,  create_color(1, 7, 9))
+    set_color(expected, 2, 1,  create_color(1, 8, 8))
+    set_color(expected, 1, 1,  create_color(1, 9, 7))
+    set_color(expected, 0, 1,  create_color(1, 10, 6))
+    
+    set_color(expected, 4, 2,  create_color(1, 11, 5))
+    set_color(expected, 3, 2,  create_color(1, 12, 4))
+    set_color(expected, 2, 2,  create_color(1, 13, 3))
+    set_color(expected, 1, 2,  create_color(1, 14, 2))
+    set_color(expected, 0, 2,  create_color(1, 15, 1))
+   
     #Compare image outputted by function to the expected image of flip_vertical.
     #Check each pixel
     vertical_image = flip_vertical(original)
