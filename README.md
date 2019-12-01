@@ -26,10 +26,10 @@ python3 P8_6_interactive_ui.py
 to run the file. The terminal will then display a list of options including Q)uit and L)oad. Type "L" or "l" and press the 'enter' key to load the desired image to manipulate. Ensure the file is of type ".jpg", ".png" or "jpeg". Once image selected is displayed, exit the image to continue the program. Then, apply the filters by typing in the letter with a bracket in front of it. To apply another filter, exit the image displayed. The image manipulations are applied cumulatively. Once content with the final product, type either "S" or "s" to save the result or press "Q"  to quit the software. 
 
 ## Credits
-Jack Rowlatt: extreme contrast filter, improved edge detection, 
+Jack Rowlatt: extreme contrast filter, improved edge detection
 Oscar Mulati: posterize filter, detect edges
 Jackie So: sepia filter, flip vertical 
-Dhriti Avanind: two-toned filter, three-toned filter, flip horizontal
+Dhriti Aravind: two-toned filter, three-toned filter, flip horizontal
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
