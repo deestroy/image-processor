@@ -1,12 +1,6 @@
 # Image Processor
 Filter Based Image Processor Version 1.0, $10.00
 
-## Contact information
-Filter Based Image Processor can be reached at:
-
-E-mail: oscar_mulati@cmail.carleton.ca
-Date: November 25, 2019
-
 ## Description
 Image processor provides an easy to use, command-line based application which can applies filters cumulatively to the user specified image and will save the result in the desired destination.
 
@@ -30,6 +24,12 @@ Jack Rowlatt: extreme contrast filter, improved edge detection
 Oscar Mulati: posterize filter, detect edges
 Jackie So: sepia filter, flip vertical 
 Dhriti Aravind: two-toned filter, three-toned filter, flip horizontal
+
+## Contact information
+Filter Based Image Processor can be reached at:
+
+E-mail: oscar_mulati@cmail.carleton.ca
+Date: November 25, 2019
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
